@@ -105,3 +105,9 @@ header a{
     border: black;
     padding-left: 10px;
 }
+
+footer{
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(151, 177, 205);
+}
