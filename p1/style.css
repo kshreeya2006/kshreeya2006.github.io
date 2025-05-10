@@ -3,7 +3,7 @@
 }
 
 .container{
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
@@ -15,9 +15,47 @@ header{
     padding: 10px;
 }
 
-li{
+header li{
     display: inline-block;
     font-size: 20px;
     padding: 5px;
 }
 
+header a{
+    text-decoration: none;
+}
+
+.row{
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 500px;
+    padding: 30px;
+}
+
+.btn-signup{
+    background-color: aquamarine;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    padding-left: 10px;
+}
+
+.summary{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.image{
+    border-radius: 10px;
+}
+
+.title{
+    font-size: 30px;
+}
