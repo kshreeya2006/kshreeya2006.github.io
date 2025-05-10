@@ -68,12 +68,14 @@ header a{
     text-align: center;
     font-size: 40px;
 }
+
 .row1{
     display: flex;
     justify-content: space-between;
     padding: 30px;
     flex-wrap: wrap;
 }
+
 .box1
 {
     width: 25%;
@@ -92,4 +94,14 @@ header a{
 
 #projects{
     background-color: rgb(204, 217, 234);
+}
+
+.demo-btn{
+    background-color: rgb(184, 204, 231);
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: black;
+    padding-left: 10px;
 }
