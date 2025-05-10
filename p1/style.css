@@ -25,6 +25,9 @@ header a{
     text-decoration: none;
 }
 
+#home{
+    background-color: whitesmoke;
+}
 .row{
     display: flex;
     padding: 20px;
@@ -58,4 +61,35 @@ header a{
 
 .title{
     font-size: 30px;
+}
+
+.proj
+{
+    text-align: center;
+    font-size: 40px;
+}
+.row1{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.box1
+{
+    width: 32%;
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+
+.proj 
+{
+    text-align: center;
+    font-size: 32px;
+    margin-top: 30px;
+}
+
+#projects{
+    background-color: rgb(204, 217, 234);
 }
