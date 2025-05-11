@@ -41,7 +41,7 @@ header a{
 }
 
 .btn-signup{
-    background-color: aquamarine;
+    background-color: rgb(183, 229, 214);
     margin-top: 10px;
     padding: 10px;
     font-size: 16px;
@@ -76,13 +76,20 @@ header a{
     flex-wrap: wrap;
 }
 
-.box1
-{
+.box1 {
     width: 25%;
     background-color: #ffffff;
     padding: 30px;
     margin: 20px 0;
     border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.box1:hover {
+    background-color: rgb(152, 162, 228); /* matches your color scheme */
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .proj 
@@ -106,8 +113,79 @@ header a{
     padding-left: 10px;
 }
 
+.services{
+  padding: 60px 20px;
+  background-color: rgb(212, 206, 235);
+}
+
+.services-title {
+  text-align: center;
+  font-size: 32px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.box2{
+  width: 200px;
+  background-color: #fcfafd;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+
+.skills-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.box3 {
+  width: 300px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skills-boxes h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#about{
+    background-color: #e4a2cd;
+}
+
+
+.contact-details {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 50px;
+  background-color: #a3abcb;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-details a {
+  color: #2d4a75;
+  text-decoration: none;
+}
+
 footer{
-    padding: 50px;
+    padding-top: 50px;
     text-align: center;
     background-color: rgb(151, 177, 205);
+
 }
+
+
