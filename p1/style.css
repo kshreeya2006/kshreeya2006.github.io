@@ -5,6 +5,13 @@
 .container{
     width: 100%;
     margin: auto;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    height: 100%;
 }
 
 header{
@@ -13,6 +20,8 @@ header{
     background-color: rgb(96, 200, 200);
     color: white;
     padding: 10px;
+    position: sticky;
+    top: 0;
 }
 
 header li{
@@ -33,6 +42,9 @@ header a{
     padding: 20px;
     justify-content: space-around;
     flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+    min-height: 650px;
 }
 
 .box{
