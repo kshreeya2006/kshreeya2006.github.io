@@ -1,4 +1,7 @@
-/*const getVal = id => parseFloat(document.getElementById(id).value);
+/*
+Without functions: 
+
+const getVal = id => parseFloat(document.getElementById(id).value);
 
 function result() {
   const a = getVal("t1"), b = getVal("t2");
@@ -12,6 +15,7 @@ function result() {
 }
 */
 
+//With Functions
 const add= (a,b)=>{
     return a+b;
 };
