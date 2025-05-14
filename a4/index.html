@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1 align="center">FACEBOOK</h1>
-    <form align="center" method="post">
-        <h3 align="center">Create a new account</h3>
-        <h6 align="center">It's quick and easy.</h6>
-        <hr>
-        <input type="text" placeholder="First name">
-        <input type="text" placeholder="Surname">
-        <br><br>
+    <div class="container">
+    <h1 align="center">Facebook</h1>
+    <h3 id="header" align="center">Create a New Account</h3>
+    <h5 align="center">It's quick and Easy</h5>
+    <form>
+        <input type="text" placeholder="First Name" required />
+        <input type="text" placeholder="Surname" required />
         <label>Date of Birth</label>
-        <input type="date">
-        <fieldset>
-            <legend align="left">Gender</legend>
-            Female<input type="radio" id="g1">
-            Male<input type="radio" id="g1">
-            Custom<input type="radio" id="g1">
-        </fieldset>
-        <br><br>
-        <input type="text" placeholder="Enter mobile no. or email">
-        <br><br>
-        <input type="password" placeholder="New password">
-        <br><br>
-        <button>Sign Up</button>
+            <div class="dob">
+                <select id="day"></select>
+                <select id="month"></select>
+                <select id="year"></select>
+            </div>
+        <br>
+        <label>Gender</label><br />
+        <div class="gender-box">
+            <div class="gender">
+                <label>Female<input type="radio" name="gender" /> </label>
+                <label>Male<input type="radio" name="gender" /> </label>
+                <label>Custom<input type="radio" name="gender" /> </label>
+            </div>
+        </div><br>
+        <input type="email" placeholder="Mobile number or email address" class="emailmob">
+        <input type="password" placeholder="New Password" class="pass"><br><br>
+        
+        <button class="signup">SignUp</button><br>
+        <p class="acc"><a href="#">Already have an account?</a></p>
     </form>
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
