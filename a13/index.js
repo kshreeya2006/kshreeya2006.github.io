@@ -4,6 +4,11 @@ const products=[
     {id:3, name:"Product3", price:43},
 ]
 
-products.map(product => {
-  console.log(product.name, product.price + 5);
+const updatedProducts = products.map(product => ({
+    id: product.id,
+    name: product.name,
+    price: product.price + 5,
+}));
+updatedProducts.map(product => {
+  console.log(product.name, product.price);
 });
