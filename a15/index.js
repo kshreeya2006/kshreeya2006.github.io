@@ -4,6 +4,7 @@ const items= [
     {name:"Orange", price:80, qty:2, status:"pending"}
 ];
 
+//updaate the price and status
 const updatedItems= items.map(item=>({
     ...item, 
     price: item.price+5,
@@ -11,4 +12,12 @@ const updatedItems= items.map(item=>({
     total: (item.price+5)* item.qty
 }));
 
-console.log(updatedItems);
+//print name, price, qty, total where qty>2
+//Hint: use filter and map
+
+/**console.log(updatedItems);**/
+
+const filteredItems = updatedItems.filter(item => item.qty > 2).map(item => {
+    console.log(`Name: ${item.name}, Price: ${item.price}, Qty: ${item.qty}, Total: ${item.total}`);
+  });
+
