@@ -28,7 +28,7 @@ const addToCart = (id) => {
     ...cart,
     [id]: currentQty + 1
   };
-  alert(`${products.find(p => p.id === id).name} added to cart`);
+  //alert(`${products.find(p => p.id === id).name} added to cart`);
   console.log(cart);
 };
 
