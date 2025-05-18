@@ -49,7 +49,12 @@ const dispCart = () => {
       <div class="product-card">
         <h3>${product.name}</h3>
         <p>Price: ₹${product.price}</p>
-        <p>Quantity: ${qty}</p>
+        <p>
+          Quantity:
+          <button onclick="decreaseQty(${product.id})">−</button>
+          ${qty}
+          <button onclick="increaseQty(${product.id})">+</button>
+        </p>
         <p>Total: ₹${total}</p>
       </div>
     `;
@@ -57,4 +62,21 @@ const dispCart = () => {
 
   cartHtml += `<h3>Order Value: ₹${orderTotal}</h3>`;
   root.innerHTML += cartHtml;
+};
+
+const increaseQty = (id) => {
+  const currentQty = cart[id] ?? 0;
+  cart = { ...cart, [id]: currentQty + 1 };
+  dispCart();
+};
+
+const decreaseQty = (id) => {
+  const currentQty = cart[id];
+  if (currentQty > 1) {
+    cart = { ...cart, [id]: currentQty - 1 };
+  } else {
+    const { [id]: _, ...rest } = cart; 
+    cart = rest;
+  }
+  dispCart();
 };
