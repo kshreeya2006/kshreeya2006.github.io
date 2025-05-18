@@ -4,11 +4,13 @@ const products = [
   { id: 3, name: "p3", price: 75 },
 ];
 
-const showProducts = () => {
-    const root= document.getElementById("root");
-    
+let cart = {}; 
 
-    products.forEach((product) => {
+const showProducts = () => {
+  const root = document.getElementById("root");
+  root.innerHTML = ""; 
+
+  products.forEach((product) => {
     const card = document.createElement("div");
     card.className = "product-card";
     card.innerHTML = `
@@ -20,7 +22,39 @@ const showProducts = () => {
   });
 };
 
-function addToCart(id) {
-  const product = products.find(p => p.id === id);
-  alert(`${product.name} added to cart!`);
-}
+const addToCart = (id) => {
+  const currentQty = cart[id] ?? 0;
+  cart = {
+    ...cart,
+    [id]: currentQty + 1
+  };
+  alert(`${products.find(p => p.id === id).name} added to cart`);
+  console.log(cart);
+};
+
+const dispCart = () => {
+  const root = document.getElementById("root");
+  root.innerHTML = "<h2>Your Cart</h2>";
+
+  let orderTotal = 0;
+  let cartHtml = "";
+
+  for (const id in cart) {
+    const product = products.find(p => p.id == id);
+    const qty = cart[id];
+    const total = qty * product.price;
+    orderTotal += total;
+
+    cartHtml += `
+      <div class="product-card">
+        <h3>${product.name}</h3>
+        <p>Price: ₹${product.price}</p>
+        <p>Quantity: ${qty}</p>
+        <p>Total: ₹${total}</p>
+      </div>
+    `;
+  }
+
+  cartHtml += `<h3>Order Value: ₹${orderTotal}</h3>`;
+  root.innerHTML += cartHtml;
+};
