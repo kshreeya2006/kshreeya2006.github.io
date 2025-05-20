@@ -22,8 +22,13 @@ function verify() {
         <select id="action">
           <option value="deposit">Deposit</option>
           <option value="withdraw">Withdraw</option>
+          <option value="transfer">Fund Transfer</option>
         </select>
         <br><br>
+        <div id="transferBox" style="display: none;">
+          <label for="recipient">Transfer to:</label>
+          <select id="recipient"></select>
+        </div>
         <input type="number" id="amount" placeholder="Enter amount" required />
         <br><br>
         <button onclick="performTransaction()">Submit</button>
@@ -54,11 +59,34 @@ function performTransaction() {
       return;
     }
     currentCustomer.balance -= amount;
+  } else if (action === "transfer") {
+    fundTransfer(amount);
+    return; 
   }
-
-  // Update balance display
   document.getElementById("balance").textContent = `Current Balance: ₹${currentCustomer.balance}`;
 }
+
+function fundTransfer(amount) {
+  const recipientCard = document.getElementById("recipient").value;
+  const recipient = customers.find(c => c.card === recipientCard);
+
+  if (!recipient) {
+    alert("Invalid recipient selected.");
+    return;
+  }
+
+  if (amount > currentCustomer.balance) {
+    alert("Insufficient balance for transfer.");
+    return;
+  }
+
+  currentCustomer.balance -= amount;
+  recipient.balance += amount;
+
+  alert(`₹${amount} transferred to ${recipient.name}`);
+  document.getElementById("balance").textContent = `Current Balance: ₹${currentCustomer.balance}`;
+}
+
 
 function logout() {
   document.body.innerHTML = `
