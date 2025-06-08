@@ -65,3 +65,32 @@ hr {
     height: 1px;
     background: #e0bfe4; 
 }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #e0bfe4;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 4px 8px rgba(178, 143, 173, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(178, 143, 173, 0.2);
+}
+
+.card a {
+  font-weight: bold;
+  color: #a678b4;
+  font-size: 1rem;
+}
